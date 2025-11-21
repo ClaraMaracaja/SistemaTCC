@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #0077b6;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav button {
+  background-color: #0096c7;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background-color: #023e8a;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+  min-height: 70vh;
+}
+
+/* ======= SEÇÃO BEM-VINDO ======= */
+.bemvindo {
+  position: relative;
+  padding: 5rem 2rem 15rem 2rem; /* mais espaço embaixo pro fundo aparecer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bemvindo h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.bemvindo p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* imagem de fundo só nesta seção */
+.bemvindo::before {
+  content: "";
+  position: absolute;
+  bottom: -30px; /* empurra mais pra baixo */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* maior */
+  height: 80%; /* maior */
+  background: url("../img/fundo.jpeg") center bottom / contain no-repeat;
+  opacity: 0.3; /* mais visível, mas ainda transparente */
+  z-index: -1;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0077b6;
+  color: white;
+}
